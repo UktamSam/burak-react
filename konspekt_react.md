@@ -22,6 +22,6 @@ REACT - JS library for building UI(users interfaces):
 
 2) Material UIni loyihamizga standart integratsiyasini amalga oshiramiz - MUI githubda yozgan mantiqlarni qo'shdik(theme.ts...)
 
-3) Material UI customized integratsiyasini amalga oshiramiz - 
+3) Material UI customized integratsiyasini amalga oshiramiz - bizga customized(Bekzod aka ishlatadigan) integratsiya moqul shuni uchun tepadagi standartni o'chiramiz.
 
-4) Loyihamizga container standartlarini joriy etamiz - 
+4) Loyihamizga container standartlarini joriy etamiz - maxWidth:"1300px"
