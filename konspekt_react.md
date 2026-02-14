@@ -1,11 +1,36 @@
-Library = инструменты в ящике 🔧
-Framework = готовый дом, куда ты ставишь мебель 🏠
+Library () -- faqatgina bitta massalani hal qilolasiz.(qo'shimcha boshqa narsalarni o'rnatish kerak: rooter...)
+Framework -- hamma masalani hal qiloladi (o'zini ichida hamma kerak narsalar bor).
 Redux + Router + сборку → получается почти framework.
 
+REACT = REAL DOM + Virtual DOM (ikkalasini bog'lovchi)
+REAL DOM -- ko'rinib turgan browser page.
+Virtual DOM -- REAL DOM'ni virtual ko'rinishi(kodi).
+
+Qizil Ferrarini kapotini qoraga o'zgartmoqchi bo'lsak REAL DOM butunlay mashinani buzib boshidan quradi a VIRTUAL DOM esa qora rangli FERRARIni eskizini chizib hozirgi butunlay qizil FERRARI bilan solishtirib faqat farqli qilgan joyini=kapotini o'zgartadi. 
+
+--(minusi) REACT - birinchi marta reactni browserda ochganda sekinroq ishlaydi (data'ni browserni кэшга саклаб олади). Кейинги сафар тез ишлайди.
+
+npm - BACKENDda ishlatadi.
+
+yarn - FRONTENDda ishlatadi. npm'ga qaraganda engilroq va tez ishlaydi. FEda o'gir fayllar ko'pligi uchun(video, html)
+
 REACT - JS library for building UI(users interfaces):
-1) <App /> - component (bironta gruppa)
+1) Component-Based -  (bironta mantiqni gruppasi(ovqatlarni cards, statistics ...)). <Statistics/>... - component
 
 2) Declarative - Design View (componentlarni clean qiladi va delelopni tezlashtiradi)
+
+//GLOBAL INTEGRATIONS (butun loyihada ishlatadigan narsalar)=> REDUX MUI (malumotlar storage)
+
+    <Provider store={store}>
+      <ThemeProvider theme={theme}> -- ичида child бор шуни учун очиб хам ёпябмиз
+        <CssBaseline />   -- Хамма браузерда бир хил ишлашини таминлайди
+        <App />           -- ичида child йук шуни учун очиб ёпмаябди          
+      </ThemeProvider> 
+    </Provider>
+
+
+
+package.json: eslintConfig -- errorlarni ushlab oladi
 ==============================================================================================================================================
 #57 Burak React project install
 1)
@@ -25,3 +50,9 @@ REACT - JS library for building UI(users interfaces):
 3) Material UI customized integratsiyasini amalga oshiramiz - bizga customized(Bekzod aka ishlatadigan) integratsiya moqul shuni uchun tepadagi standartni o'chiramiz.
 
 4) Loyihamizga container standartlarini joriy etamiz - maxWidth:"1300px"
+
+==============================================================================================================================================
+#59 REACT rooter DOM orqali client routing tizmmi
+
+1) React Router DOM orqali routing tizmini o'rnatamiz - 
+2) FE screen componentlarini hosil qilamiz - 
