@@ -74,6 +74,7 @@ MUI *container*larga default holatda ikki tomondan padding beradi. Agar kerak bo
 ==============================================================================================================================================
 #61 Footer develop(REACT)
 
+commit -m "fix: modify root index render logic"
 1) Header develop yakunlaymiz - 
   
 2) Footer develop - 
