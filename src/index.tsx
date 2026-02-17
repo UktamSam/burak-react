@@ -1,5 +1,5 @@
  import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
 import App from "./app/App";
@@ -10,9 +10,11 @@ import theme from "./app/MaterialTheme";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./css/index.css";
 
+const container = document.getElementById('root')!;   //REAL DOM
+const root = createRoot(container);
 
 //GLOBAL INTEGRATIONS => REDUX MUI
-ReactDOM.render(                     //ReactDOM integration:
+root.render(                     //ReactDOM integration:
   <React.StrictMode>
     <Provider store={store}>
       <ThemeProvider theme={theme}>
@@ -23,7 +25,6 @@ ReactDOM.render(                     //ReactDOM integration:
       </ThemeProvider> 
     </Provider>
   </React.StrictMode>,
-  document.getElementById("root")   //REAL DOM
 );
 
 // If you want to start measuring performance in your app, pass a function

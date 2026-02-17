@@ -67,5 +67,13 @@ package.json: eslintConfig -- errorlarni ushlab oladi
 
 *commit -m "feat: upload client materials"
    
-1) HEADER & NAVBAR publishing - 
+1) HEADER & NAVBAR publishing - HomePage'da chiqadigan Navbarni develop qildik. Yani tepadagi NavLink'larni va Login button. User login bo'lgan holatda va hali login bo'lmagan holatda chiqadigan NavLink'larni ajratdik *authMember = true* bo'lsa va *null* bo'lsa. 
 MUI *container*larga default holatda ikki tomondan padding beradi. Agar kerak bo'lmasa customize qilish mumkin.
+
+*commit -m "feat: develop header and footer part one"
+==============================================================================================================================================
+#61 Footer develop(REACT)
+
+1) Header develop yakunlaymiz - 
+  
+2) Footer develop - 
