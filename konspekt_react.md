@@ -63,6 +63,9 @@ package.json: eslintConfig -- errorlarni ushlab oladi
 
 *commit -m "fix: organize header and footer components"
    
-2) FIGMAga qarab publishing rejalashtirish - 
+2) FIGMAga qarab publishing rejalashtirish - projectda ishlatadigan *public* folderga kerakli filelarni upload qildik. index.html'da icon & title'ni change qildik.
+
+*commit -m "feat: upload client materials"
    
-3) HEADER & NAVBAR publishing - 
+1) HEADER & NAVBAR publishing - 
+MUI *container*larga default holatda ikki tomondan padding beradi. Agar kerak bo'lmasa customize qilish mumkin.
