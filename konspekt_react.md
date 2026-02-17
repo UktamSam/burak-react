@@ -56,3 +56,13 @@ package.json: eslintConfig -- errorlarni ushlab oladi
 
 1) React Router DOM orqali routing tizmini o'rnatamiz - 
 2) FE screen componentlarini hosil qilamiz - 
+==============================================================================================================================================
+#60 HEADER & NAVBARlarni develop qilamiz
+
+1) HEADER & FOOTERlarni ahamiyati - loyihamizda 2 hil Navbar bo'ladi HomePage'da va OtherPage. "react-router-dom"ni *useLocation()* methodini ishlatib hozirgi page'ni location bilib shunqa qarab kerakli Navbar chiqardik. A Footer esa hamma page'da bir hil.
+
+*commit -m "fix: organize header and footer components"
+   
+2) FIGMAga qarab publishing rejalashtirish - 
+   
+3) HEADER & NAVBAR publishing - 
