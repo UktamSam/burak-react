@@ -79,4 +79,6 @@ commit -m "fix: homeNavbar menu part refactoring"
 
 1) Header develop yakunlaymiz - 
 commit -m fix: modify homeNavbar header component
+
 2) Footer develop - 
+commit -m "feat: integration footer and basket source"
