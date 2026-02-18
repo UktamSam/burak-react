@@ -96,7 +96,8 @@ commit -m "feat: integration footer and basket source"
 1) HomePage Screen Componentiga tegishli bo'lgan Sectional Componentlarni hosil qilamiz - HomePage screen componentni ichiga kiradigan sectional componentlarni hosil qildik. Ichida *Advertisement* & *Events* faqat *div*ni ichiga joyladik, a qolganlarini esa ham *div* ham *container*ga joyladik.
 commit -m "fix: organize homepage related sectional components"
 
-2) Statistics Sectional Component develop - 
+2) Statistics Sectional Component develop - *stack*lar orqali har bitta blockni yaratib oralariga tayyor yasalgan *Divider*ni qo'shdik.
 commit -m "fix: modify statistics sectional component"
    
-3) PopularDishes Sectional Component develop - 
+3) PopularDishes Sectional Component develop - MUIni o'zidan emas MUI Joy package'ni o'rnatib ichidan tayyor 2ta cardni olib o'zimizga customize card yaratdik. Mantiq bitta card uchun yozilgan. Shuni uchun tepada yozib qoldirdik Array'ni ichiga taomlarni malumotlarini yozib shu Array'ni Map qildik.
+commit -m "feat: develop popular dishes sectional component"
