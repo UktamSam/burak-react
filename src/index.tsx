@@ -13,7 +13,9 @@ import "./css/index.css";
 const container = document.getElementById('root')!;   //REAL DOM
 const root = createRoot(container);
 
-//GLOBAL INTEGRATIONS => REDUX MUI
+//GLOBAL INTEGRATIONS => REDUX | MUI | ROUTER | CONTEXT | SocketIO
+//Loyihani xoxlagan joyida ishlatamiz
+
 root.render(                     //ReactDOM integration:
   <React.StrictMode>
     <Provider store={store}>

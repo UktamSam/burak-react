@@ -72,13 +72,29 @@ MUI *container*larga default holatda ikki tomondan padding beradi. Agar kerak bo
 
 *commit -m "feat: develop header and footer part one"
 ==============================================================================================================================================
+COMPONENTS: SCREEN(header & footer oras) | SECTIONAL | COMMON/REUSABLE (header&footer)
+
+CONTAINERni DIVga o'rashni sababi background to'liq page'ga bo'lishi va CSS classni himoyalay.
+
+CONTAINER - 1300px
+STACK - display: flex; (row; column)
+BOX - div (oxirgi mantiq, ichida hechnarsa yo'q)
+
 #61 Footer develop(REACT)
 
 commit -m "fix: modify root index render logic"
 commit -m "fix: homeNavbar menu part refactoring"
 
-1) Header develop yakunlaymiz - 
+1) Header develop yakunlaymiz - Refactoring qildik = .tsx'ga style orqali yozilgan mantiqni *css*ga ko'chirdik. O'zi odatda shunaqa tartibda yoziladi ekan. Va Headerni pastgi qismi Sign Up button bilan Logo'ni joylashtirdik. Pastgi qismi faqat HomePage'da bo'ladi, OtherPage'larda esa faqat tepa qismi. 
 commit -m fix: modify homeNavbar header component
 
-2) Footer develop - 
+2) Footer develop - Footer ham Reusable=Common component hisoblanadi. Va biz u Componentni *styled-components* orqali customized component qurdik. Yani CSS-in-JS va u componentni xoxlagan joyimizda chaqirib ishlataveramiz. Va oxirida tayyor yozilgan Basketni ham qo'shdik.
 commit -m "feat: integration footer and basket source"
+==============================================================================================================================================
+#62 HomePage - develop(REACT)
+
+1) HomePage Screen Componentiga tegishli bo'lgan Sectional Componentlarni hosil qilamiz - 
+   
+2) Statistics Sectional Component develop - 
+   
+3) PopularDishes Sectional Component develop - 

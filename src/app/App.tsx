@@ -16,7 +16,7 @@ import "../css/footer.css"
 
 
 function App() {
-  const location = useLocation();
+  const location = useLocation();   //useText - hooklar
   console.log("locat:", location);
   
 

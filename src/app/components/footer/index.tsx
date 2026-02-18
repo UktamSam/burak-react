@@ -3,6 +3,7 @@ import { Box, Container, Stack } from "@mui/material";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+//CSS-in-JS - JS ichida yangi customize component hosil qilish.(styled-components; JSS; Emotion) 
 const Footers = styled.div`
   width: 100%;
   height: 590px;
