@@ -93,8 +93,10 @@ commit -m "feat: integration footer and basket source"
 ==============================================================================================================================================
 #62 HomePage - develop(REACT)
 
-1) HomePage Screen Componentiga tegishli bo'lgan Sectional Componentlarni hosil qilamiz - 
-   
+1) HomePage Screen Componentiga tegishli bo'lgan Sectional Componentlarni hosil qilamiz - HomePage screen componentni ichiga kiradigan sectional componentlarni hosil qildik. Ichida *Advertisement* & *Events* faqat *div*ni ichiga joyladik, a qolganlarini esa ham *div* ham *container*ga joyladik.
+commit -m "fix: organize homepage related sectional components"
+
 2) Statistics Sectional Component develop - 
+commit -m "fix: modify statistics sectional component"
    
 3) PopularDishes Sectional Component develop - 
