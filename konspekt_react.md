@@ -101,3 +101,16 @@ commit -m "fix: modify statistics sectional component"
    
 3) PopularDishes Sectional Component develop - MUIni o'zidan emas MUI Joy package'ni o'rnatib ichidan tayyor 2ta cardni olib o'zimizga customize card yaratdik. Mantiq bitta card uchun yozilgan. Shuni uchun tepada yozib qoldirdik Array'ni ichiga taomlarni malumotlarini yozib shu Array'ni Map qildik.
 commit -m "feat: develop popular dishes sectional component"
+==============================================================================================================================================
+#63 HomePage - develop davomi (REACT)
+
+1) Target Play - bizga oxirgi natija ko'rsatiladi a publishing jarayonini esa o'zimiz qilamiz.
+   
+2) New Dishes component - 
+    
+3) Advertisement component - 
+   
+4) Active Users component - 
+   
+5) HomePage Events component - 
+
