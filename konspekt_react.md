@@ -106,7 +106,8 @@ commit -m "feat: develop popular dishes sectional component"
 
 1) Target Play - bizga oxirgi natija ko'rsatiladi a publishing jarayonini esa o'zimiz qilamiz.
    
-2) New Dishes component - 
+2) New Dishes component - NewDishes sectional componentni ham hozircha Arrayni ichida taomlar haqida malumot qoldirib hard coding qildik. Keyinchalik DBga ulaymiz ekan.
+commit -m "feat: develop newDishes sectional component"
     
 3) Advertisement component - 
    
