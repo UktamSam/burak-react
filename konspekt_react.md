@@ -108,8 +108,10 @@ commit -m "feat: develop popular dishes sectional component"
    
 2) New Dishes component - NewDishes sectional componentni ham hozircha Arrayni ichida taomlar haqida malumot qoldirib hard coding qildik. Keyinchalik DBga ulaymiz ekan.
 commit -m "feat: develop newDishes sectional component"
+commit -m "fix: modify popular and new dishes components(length=0)"
     
-3) Advertisement component - 
+3) Advertisement component -
+ 
    
 4) Active Users component - 
    
