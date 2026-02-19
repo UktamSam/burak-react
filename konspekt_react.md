@@ -89,31 +89,37 @@ commit -m "fix: homeNavbar menu part refactoring"
 commit -m fix: modify homeNavbar header component
 
 2) Footer develop - Footer ham Reusable=Common component hisoblanadi. Va biz u Componentni *styled-components* orqali customized component qurdik. Yani CSS-in-JS va u componentni xoxlagan joyimizda chaqirib ishlataveramiz. Va oxirida tayyor yozilgan Basketni ham qo'shdik.
+   
 commit -m "feat: integration footer and basket source"
 ==============================================================================================================================================
 #62 HomePage - develop(REACT)
 
 1) HomePage Screen Componentiga tegishli bo'lgan Sectional Componentlarni hosil qilamiz - HomePage screen componentni ichiga kiradigan sectional componentlarni hosil qildik. Ichida *Advertisement* & *Events* faqat *div*ni ichiga joyladik, a qolganlarini esa ham *div* ham *container*ga joyladik.
-commit -m "fix: organize homepage related sectional components"
-
-2) Statistics Sectional Component develop - *stack*lar orqali har bitta blockni yaratib oralariga tayyor yasalgan *Divider*ni qo'shdik.
-commit -m "fix: modify statistics sectional component"
    
-3) PopularDishes Sectional Component develop - MUIni o'zidan emas MUI Joy package'ni o'rnatib ichidan tayyor 2ta cardni olib o'zimizga customize card yaratdik. Mantiq bitta card uchun yozilgan. Shuni uchun tepada yozib qoldirdik Array'ni ichiga taomlarni malumotlarini yozib shu Array'ni Map qildik.
-commit -m "feat: develop popular dishes sectional component"
+*commit -m "fix: organize homepage related sectional components"
+
+1) Statistics Sectional Component develop - *stack*lar orqali har bitta blockni yaratib oralariga tayyor yasalgan *Divider*ni qo'shdik.
+
+*commit -m "fix: modify statistics sectional component"
+   
+1) PopularDishes Sectional Component develop - MUIni o'zidan emas MUI Joy package'ni o'rnatib ichidan tayyor 2ta cardni olib o'zimizga customize card yaratdik. Mantiq bitta card uchun yozilgan. Shuni uchun tepada yozib qoldirdik Array'ni ichiga taomlarni malumotlarini yozib shu Array'ni Map qildik.
+
+*commit -m "feat: develop popular dishes sectional component"
 ==============================================================================================================================================
 #63 HomePage - develop davomi (REACT)
 
 1) Target Play - bizga oxirgi natija ko'rsatiladi a publishing jarayonini esa o'zimiz qilamiz.
    
 2) New Dishes component - NewDishes sectional componentni ham hozircha Arrayni ichida taomlar haqida malumot qoldirib hard coding qildik. Keyinchalik DBga ulaymiz ekan.
-commit -m "feat: develop newDishes sectional component"
-commit -m "fix: modify popular and new dishes components(length=0)"
+
+*commit -m "feat: develop newDishes sectional component"
+*commit -m "fix: modify popular and new dishes components(length=0)"
     
-3) Advertisement component -
- 
+1) Advertisement component - videoni shunchaki *div* ichiga joylashtirdik, *container*siz. Yana width:100% qildik, ekran qancha katta bo'lsa moslashib ketaveradi.
+
+*commit -m "feat: develop advertisement sectional component"
    
-4) Active Users component - 
+1) Active Users component - 
    
-5) HomePage Events component - 
+2) HomePage Events component - 
 
