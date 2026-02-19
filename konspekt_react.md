@@ -115,11 +115,12 @@ commit -m "feat: integration footer and basket source"
 *commit -m "feat: develop newDishes sectional component"
 *commit -m "fix: modify popular and new dishes components(length=0)"
     
-1) Advertisement component - videoni shunchaki *div* ichiga joylashtirdik, *container*siz. Yana width:100% qildik, ekran qancha katta bo'lsa moslashib ketaveradi.
+3) Advertisement component - videoni shunchaki *div* ichiga joylashtirdik, *container*siz. Yana width:100% qildik, ekran qancha katta bo'lsa moslashib ketaveradi.
 
 *commit -m "feat: develop advertisement sectional component"
    
-1) Active Users component - 
-   
-2) HomePage Events component - 
+4) Active Users component - newDishes sectional component bilan o'xshash joyligi ko'pligi uchun shundan olib qildim. Kerak emas joylarini o'chirib.
+commit -m "feat: develop activeUsers sectioanl component"
+
+5) HomePage Events component - 
 
