@@ -24,7 +24,7 @@ function App() {
      <>
         {location.pathname === "/" ? <HomeNavbar /> : <OtherNavbar />}
         <Switch>
-          <Route exact path="/products">
+          <Route path="/products">
             <ProductsPage />
           </Route>
           <Route exact path="/orders">

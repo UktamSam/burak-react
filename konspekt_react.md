@@ -6,6 +6,10 @@ REACT = REAL DOM + Virtual DOM (ikkalasini bog'lovchi)
 REAL DOM -- ko'rinib turgan browser page.
 Virtual DOM -- REAL DOM'ni virtual ko'rinishi(kodi).
 
+REACT - (Component-Based) (Declarative Single) (Page Application)
+
+CssBaseline - browserlardan CSSni yo'qotib beradi, MIUni yuqoriroq qo'yadi.
+
 Qizil Ferrarini kapotini qoraga o'zgartmoqchi bo'lsak REAL DOM butunlay mashinani buzib boshidan quradi a VIRTUAL DOM esa qora rangli FERRARIni eskizini chizib hozirgi butunlay qizil FERRARI bilan solishtirib faqat farqli qilgan joyini=kapotini o'zgartadi. 
 
 --(minusi) REACT - birinchi marta reactni browserda ochganda sekinroq ishlaydi (data'ni browserni кэшга саклаб олади). Кейинги сафар тез ишлайди.
@@ -80,6 +84,10 @@ CONTAINER - 1300px
 STACK - display: flex; (row; column)
 BOX - div (oxirgi mantiq, ichida hechnarsa yo'q)
 
+CSS-in-JS:
+
+REACT - library
+
 #61 Footer develop(REACT)
 
 commit -m "fix: modify root index render logic"
@@ -122,5 +130,14 @@ commit -m "feat: integration footer and basket source"
 4) Active Users component - newDishes sectional component bilan o'xshash joyligi ko'pligi uchun shundan olib qildim. Kerak emas joylarini o'chirib.
 commit -m "feat: develop activeUsers sectioanl component"
 
-5) HomePage Events component - 
+5) HomePage Events component - Events sectional component MIUni SWIPER orqali hosil qilingan.
+==============================================================================================================================================
+#64 ProductsPage - publishing (REACT)
+
+1) ProductsPage Screen Componentida nested routing tizmini hosil qilamiz - bizda avval App.tsx ichida hamma page'larni routingi hosil qilingan edi. Endi esa alohoda ProductsPage'ni ichida yana routing hosil qilamiz - nested routing. 
+Nested routing - routing'ni ichida yangi router'larni hosil qilish.
+
+2) ProductsPage Screen Componentida Sectional Componentlarni qurib olamiz - 
+
+3) Products list sectional Componentini publishing qilamiz - 
 
