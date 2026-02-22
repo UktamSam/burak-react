@@ -140,4 +140,7 @@ Nested routing - routing'ni ichida yangi router'larni hosil qilish.
 2) ProductsPage Screen Componentida Sectional Componentlarni qurib olamiz - 
 
 3) Products list sectional Componentini publishing qilamiz - 
+==============================================================================================================================================
+#65 ProductsPage - screen component publishing davomi (REACT)
 
+1) ChosenProduct Sectional Component puvlishing - 
