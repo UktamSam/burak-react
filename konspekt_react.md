@@ -137,10 +137,16 @@ commit -m "feat: develop activeUsers sectioanl component"
 1) ProductsPage Screen Componentida nested routing tizmini hosil qilamiz - bizda avval App.tsx ichida hamma page'larni routingi hosil qilingan edi. Endi esa alohoda ProductsPage'ni ichida yana routing hosil qilamiz - nested routing. 
 Nested routing - routing'ni ichida yangi router'larni hosil qilish.
 
-2) ProductsPage Screen Componentida Sectional Componentlarni qurib olamiz - 
+2) ProductsPage Screen Componentida Sectional Componentlarni qurib olamiz - sectional componentlarni Stacklar orqali hosil qilganmiz. Umuman page'ga background berish kerak bo'lgan "Our Family Brands" bilan Google Map'ni div'ga o'rab Container'ga soldim.
 
-3) Products list sectional Componentini publishing qilamiz - 
+3) Products list sectional Componentini publishing qilamiz - productlarni ro'yhatini card'lar orqali hosil qildim. Va category'ga bo'lish tizmini ham tepada button orqali qildim. Pastda esa yana Pagination qo'shdim.
 ==============================================================================================================================================
 #65 ProductsPage - screen component publishing davomi (REACT)
 
-1) ChosenProduct Sectional Component puvlishing - 
+1) ChosenProduct Sectional Component puvlishing - bu mantiqni esa tayyor holatida qo'ydim.
+==============================================================================================================================================
+#66 OrdersPage - orderlar sahifasini publish qilamiz (REACT)
+
+1) MUIning Tap Panel Component - очилиб турган OrderPageни яна сахифа(панель)ларга булиш. Мисол учун Paused / Processed / Finished order. Va har bitta Tab ichida TapPanel=content bo'ladi.
+   
+2) OrdersPage Screen Componenti va uning Sectional Componentlarini publishing - 
