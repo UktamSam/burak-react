@@ -165,6 +165,7 @@ Nested routing - routing'ni ichida yangi router'larni hosil qilish.
 3) useState hook - 
    
 4) useEffect hook - 
+[] useEffect Array Dependency. Har o'zgarganda mantiq boshidan ishlaydi. 
 
 HOOK  -- qarmoq, крючок.
 useEffect - lifecycle qurib beradi.
