@@ -25,8 +25,8 @@ REACT - JS library for building UI(users interfaces):
 
 //GLOBAL INTEGRATIONS (butun loyihada ishlatadigan narsalar)=> REDUX MUI (malumotlar storage)
 
-    <Provider store={store}>
-      <ThemeProvider theme={theme}> -- ичида child бор шуни учун очиб хам ёпябмиз
+    <Provider store={store}> -- Redux
+      <ThemeProvider theme={theme}> -- ичида child бор шуни учун очиб хам ёпябмиз. -- MUI provider
         <CssBaseline />   -- Хамма браузерда бир хил ишлашини таминлайди
         <App />           -- ичида child йук шуни учун очиб ёпмаябди          
       </ThemeProvider> 
@@ -149,4 +149,23 @@ Nested routing - routing'ni ichida yangi router'larni hosil qilish.
 
 1) MUIning Tap Panel Component - очилиб турган OrderPageни яна сахифа(панель)ларга булиш. Мисол учун Paused / Processed / Finished order. Va har bitta Tab ichida TapPanel=content bo'ladi.
    
-2) OrdersPage Screen Componenti va uning Sectional Componentlarini publishing - 
+2) OrdersPage Screen Componenti va uning Sectional Componentlarini publishing - Target Play orqali mantiqlarni yozdik.
+==============================================================================================================================================
+#68 UserPage va HelpPage Screen Componentlarini publish qilamiz (REACT)
+
+1) Tayyor file'larni yukladik, bizga yangi bo'lgan narsa bu *Accordion*, savol ko'rinib turadi va savolga bosilsa javobi ham ko'rinadi.
+
+===================================================================================================================================================
+#78 Hooks - useState va useEffect React Hooks
+
+1) React Class & Functional Components -
+   
+2) Lifecycle methods -  
+   
+3) useState hook - 
+   
+4) useEffect hook - 
+
+HOOK  -- qarmoq, крючок.
+useEffect - lifecycle qurib beradi.
+useState - sunniy state qurib beradi.
