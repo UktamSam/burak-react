@@ -195,7 +195,7 @@ _id: string type'da yuborish kerak. BE'ga o'xshab ObjectId.
    
   REDUX STRUCTURE:  1) SLICE (dispatch => Action => Reducers => Store)
                     1) SELECTOR (Store => subscribe)
-1) Redux logger middleware - 
-2) HomePage Redux Architecture test - 
+3) Redux logger middleware - Logging Standart (BE -- Morgen)
+4) HomePage Redux Architecture test - 
 
 initial state - бошлангич холат
