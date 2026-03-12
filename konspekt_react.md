@@ -158,15 +158,40 @@ Nested routing - routing'ni ichida yangi router'larni hosil qilish.
 ===================================================================================================================================================
 #78 Hooks - useState va useEffect React Hooks
 
-1) React Class & Functional Components -
+1) React Class & Functional Components - React 16.8dan keyin mantiqi kopligi sabab Class'lar ishlatilmaydi, hozir faqat Functional Component ishlatiladi. React Classni farqi - React.Componentdan inheritance oladi va result'da View render qilib yuboradi.
    
-2) Lifecycle methods -  
+2) Lifecycle methods -  Mount(component render bo'lganda) | Update (yangilanganda) | Unmount (o'chirilganda=component yopilganda). Bironta mantiqni tochno biron vaqtda ishga tushishi uchun ishlatiladi, ko'pincha DBdan data olishda.
    
-3) useState hook - 
+3) useState hook - class'ni ishlatmaslik uchun sunniy State yaratilgan. Class'da biz hamma state'larni property qismida berib ketardik. useState esa shunchaki o'zini ichida saqloladi render(page refresh) bo'lgan taqdirda ham.
    
-4) useEffect hook - 
+4) useEffect hook - bu esa Lifecycle methods'ni o'rniga yaratilgan. 
 [] useEffect Array Dependency. Har o'zgarganda mantiq boshidan ishlaydi. 
+Mantiqda eng ko'p DidMount | DidUpdate ishlatiladi
+
 
 HOOK  -- qarmoq, крючок.
 useEffect - lifecycle qurib beradi.
 useState - sunniy state qurib beradi.
+===================================================================================================================================================
+#79 Redux - Loyihamiz storage architecturasi
+
+1) Loyihamiz qanday tarzda run bo'lyotgani - TS baribir JSga uguriladi run bo'lganda.
+   
+2) REDUX Architecture - Redux ham MVC kabi Pattern lekin FEda ko'proq ishlatilad. Data Flow tomondan MVC -- bidirectional = bir aniq malumotlar oqimiga ega emas (bir biridan mustaqil bo'lgan Controller mavjud). Redux -- unidirectional data flow, bir aniq malumotlar oqimi bor.
+UI (user bironta input/click qiladi) → dispatch(action) (nima bo'lganini aytadi) → reducer (Функция получает state и action и создаёт новый state) → store (Yangi state saqlaydi) → subscribe (UIga yangi state'ni oboradi) → UI update
+   
+3) Redux Toolkit - oddiy Redux'da ko'p mantiq yozishimiz kerak(action types, action creators, reducers, store configuration). A Redux Toolkit shu mantiqlarni Automatic qiladi.
+
+boilerplate - mantiq uchun emas, kodni ishlashi uchun kod yozish.
+===================================================================================================================================================
+#80 HomePage - Redux Slice va Selectorlarini tashkil etamiz*
+
+1) HomePage Screen Componentiga type integration - Redux faqat BITTA STORE'dan iborat. Yani uni hamma componentlarda chaqirib ishlatishimiz mumkin.
+    
+   Type Integartion: Screen Component Based | Target Oriented 
+_id: string type'da yuborish kerak. BE'ga o'xshab ObjectId.
+2) HomePage Screen Componentiga Redux storage configuratsiya - 
+3) Redux logger middleware - 
+4) HomePage Redux Architecture test - 
+
+initial state - бошлангич холат

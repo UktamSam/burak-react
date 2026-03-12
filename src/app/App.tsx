@@ -38,8 +38,8 @@ function App() {
             <HelpPage />
           </Route>
           <Route exact path="/">
-            <Test />
-            {/* <HomePage /> */}
+            {/* <Test /> */}
+            <HomePage />
           </Route>
         </Switch>
         <Footer /> 
