@@ -190,8 +190,12 @@ boilerplate - mantiq uchun emas, kodni ishlashi uchun kod yozish.
     
    Type Integartion: Screen Component Based | Target Oriented 
 _id: string type'da yuborish kerak. BE'ga o'xshab ObjectId.
-2) HomePage Screen Componentiga Redux storage configuratsiya - 
-3) Redux logger middleware - 
-4) HomePage Redux Architecture test - 
+
+2) HomePage Screen Componentiga Redux storage configuratsiya - 2ta file yaratamiz Slice (DBdan malumotni olib Reducer orqali Store'ga joylashtiradi) Selector (Store'da yangi joylangan malumotni UI'ga berish)
+   
+  REDUX STRUCTURE:  1) SLICE (dispatch => Action => Reducers => Store)
+                    1) SELECTOR (Store => subscribe)
+1) Redux logger middleware - 
+2) HomePage Redux Architecture test - 
 
 initial state - бошлангич холат
