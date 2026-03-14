@@ -9,7 +9,7 @@ const initialState: HomePageState = {
 
 const homePageSlice = createSlice({
     name: "homePage",
-    initialState,
+    initialState: initialState,
     reducers: {
         setPopularDishes: (state, action) => {
             state.popularDishes = action.payload;
@@ -23,7 +23,7 @@ const homePageSlice = createSlice({
     }
 });
 
-export const { setPopularDishes, setnewDishes, settopUsers } = homePageSlice.actions;
+export const { setPopularDishes, setnewDishes, settopUsers } = homePageSlice.actions; // dispatch orqali malumot obkelish keyinchalik
 
 const HomePageReducer = homePageSlice.reducer;
 export default HomePageReducer;

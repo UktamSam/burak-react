@@ -199,3 +199,79 @@ _id: string type'da yuborish kerak. BE'ga o'xshab ObjectId.
 4) HomePage Redux Architecture test - 
 
 initial state - бошлангич холат
+Обычный REACT: Component → useState → UI обновляется
+REACT via REDUX: UI → dispatch(action) → reducer → store → selector → UI
+
+Полный круг в Redux:
+
+1. Компонент (UI) решает, что нужны данные
+Ваш компонент HomePage загружается на экране. Срабатывает хук useEffect, внутри которого у вас есть массив с едой (result). Компонент понимает: "Мне нужно сохранить эти блюда в глобальное хранилище".
+
+TypeScript
+// Файл: screens/homePage/index.tsx
+useEffect(() => {
+    const result = [ /* Шаурма, Кебаб, Карам Шорва */ ];
+    setPopularDishes(result); // <-- Начинаем процесс!
+}, []);
+
+1. Dispatch (Курьер)
+Функция setPopularDishes(result) не идет в базу напрямую. Она вызывает dispatch, который работает как курьер. В вашем коде вы обернули это в удобную функцию actionDispatch.
+
+TypeScript
+// Файл: screens/homePage/index.tsx
+const actionDispatch = (dispatch: Dispatch) => ({
+  // dispatch берет экшен setPopularDishes и данные (data) и несет их в Redux
+  setPopularDishes: (data: Product[]) => dispatch(setPopularDishes(data)), 
+});
+
+3. Reducer (Обработчик) принимает посылку
+Курьер (dispatch) приносит данные в homePageSlice. Там Reducer смотрит на название действия (setPopularDishes) и выполняет инструкцию: берет присланные данные (action.payload — это ваш массив result) и записывает их в состояние.
+
+TypeScript
+// Файл: screens/homePage/slice.ts
+reducers: {
+    setPopularDishes: (state, action) => {
+        // state.popularDishes до этого был пуст: []
+        // теперь мы кладем туда наш массив
+        state.popularDishes = action.payload; 
+    },
+}
+
+4. Store (Хранилище) обновляется
+Теперь в вашем главном хранилище store, в разделе homePage, лежат три популярных блюда.
+
+TypeScript
+// Файл: store.ts
+export const store = configureStore({
+  reducer: {
+    homePage: HomePageReducer, // <-- Данные теперь живут здесь
+  },
+});
+
+5. Selector (Получатель) достает новые данные
+Чтобы безопасно забрать данные из хранилища, у вас написан селектор. Он знает точный путь к нужной полке: state ➔ homePage ➔ popularDishes.
+
+TypeScript
+// Файл: screens/homePage/selector.ts
+export const retrievePopularDishes = createSelector(
+    selectHomePage,
+    (HomePage) => HomePage.popularDishes // <-- Берем только массив популярных блюд
+);
+
+6. Компонент (UI) получает данные и перерисовывается
+Хук useSelector в вашем компоненте HomePage постоянно "слушает" селектор. Как только на шаге 4 данные в Store обновились, useSelector мгновенно это замечает, вытягивает новый массив и кладет его в переменную popularDishes.
+
+TypeScript
+// Файл: screens/homePage/index.tsx
+// Эта строчка автоматически получит массив с едой, как только он попадет в Redux
+const {popularDishes} = useSelector(popularDishesRetriever);
+Теперь у вас в HomePage есть готовая переменная popularDishes с актуальными данными из Redux, и вы можете передать её в <PopularDishes />, чтобы отрисовать карточки на экране.
+
+===================================================================================================================================================
+#81 HomePage - Backend olingan malumotlar orqali develop yakunlaymiz*
+
+1) FE kerak environmental variable & configuration file -
+
+2) BEdan malumot olish uchun API service - 
+   
+3) API Servicelar orqali olingan malumotlar asosida HomePage Screen Component develop - 

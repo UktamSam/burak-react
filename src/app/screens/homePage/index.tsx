@@ -14,7 +14,7 @@ import { retrievePopularDishes } from "./selector";
 import { Product } from "../../../lib/types/product";
 
 /* REDUX SLICE & SELECTOR */
-const actionDispatch = (dispatch: Dispatch) => ({
+const actionDispatch = (dispatch: Dispatch) => ({                           //DEFINE
   setPopularDishes: (data: Product[]) => dispatch(setPopularDishes(data)),
 });
 
@@ -24,12 +24,13 @@ const popularDishesRetriever = createSelector(
 );
 
 export default function HomePage() {
-    const { setPopularDishes } = actionDispatch(useDispatch());
+  // 2.1: DBdan olingan "result"ni dispatch orqali yuborish
+    const { setPopularDishes } = actionDispatch(useDispatch());             //CALL
     const {popularDishes} = useSelector(popularDishesRetriever);
     // 3: SELECTOR: STORE => DATA
 
   useEffect(() => {
-    // 1: BE serverdan JSON formatda DATA qabul qilamiz 
+    // 1: BEdan JSON formatda DATA qabul qilamiz (BE DATA FETCH)
       const result = [
     {
         "_id": "698a03cc4c60d82b4260f84d",
@@ -93,8 +94,7 @@ export default function HomePage() {
     // 2: SLICE: DATA => STORE
     // @ts-ignore
     setPopularDishes(result);
-  }, []);
-  
+  }, []);  // 4: INTERACTION
 
   return (
     <div className="homepage">
