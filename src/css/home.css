@@ -92,8 +92,8 @@
 }
 
 .homepage .popular-dishes-frame .cards-frame .card {
-    min-height: 430px;
-    min-width: 300px;
+    height: 430px;
+    width: 300px;
     cursor: pointer;
 }
 

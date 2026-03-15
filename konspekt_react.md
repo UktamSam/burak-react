@@ -270,7 +270,7 @@ const {popularDishes} = useSelector(popularDishesRetriever);
 ===================================================================================================================================================
 #81 HomePage - Backend olingan malumotlar orqali develop yakunlaymiz*
 
-1) FE kerak environmental variable & configuration file -
+1) FE kerak environmental variable & configuration file - .env file hosil qilib uni ichida biz ishlatadigan URLni bitta uzun const'ga tengladik. config.ts'da esa ana shu uzun *REACT_APP_API_URL*ni qisqa *serverApi* const'ga tengladik va shu config'da yana biz ishlatadigan ERRORlarni hosil qilib qo'ydik.
 
 2) BEdan malumot olish uchun API service - 
    
