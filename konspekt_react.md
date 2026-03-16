@@ -275,3 +275,8 @@ const {popularDishes} = useSelector(popularDishesRetriever);
 2) BEdan malumot olish uchun API service - 
    
 3) API Servicelar orqali olingan malumotlar asosida HomePage Screen Component develop - 
+===================================================================================================================================================
+#82 RestaurantPage - Redux Slice va Selectorlarni tashkil qilamiz
+
+1) ProductsPage Type integration - 
+2) ProductsPage Slice & Selector develop - 
