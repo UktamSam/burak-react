@@ -280,3 +280,12 @@ const {popularDishes} = useSelector(popularDishesRetriever);
 
 1) ProductsPage Type integration - 
 2) ProductsPage Slice & Selector develop - 
+
+===================================================================================================================================================
+#83 RestaurantPage - Backend olingan malumotlar orqali develop yakunlaymiz
+
+1) Products Componentida Service API asosida develop - 
+2) User interaction uchun Handlerlar - 
+3) productsSearch object develop & data fetch - 
+4) ChosenProducts Server API asosida develop
+
