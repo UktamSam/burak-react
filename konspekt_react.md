@@ -289,3 +289,10 @@ const {popularDishes} = useSelector(popularDishesRetriever);
 3) productsSearch object develop & data fetch - 
 4) ChosenProducts Server API asosida develop
 
+{ withCredentials: true } - “cookies request bilan birga chiqadi”
+===================================================================================================================================================
+#84 Basket - Savatimizni buziness mantiqini develop qilamiz
+
+1) Basketga yangi product qo'shish mantiq - 
+2) Basket mantiqi hooklar orqali - 
+3) Basket bilan bog'liq boshqa mantiqlar - 

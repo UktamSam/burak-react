@@ -49,7 +49,7 @@ export default function NewDishes() {
                             <CardOverflow variant="soft" className="product-detail">
                                 <Stack className="info">
                                     <Stack flexDirection={"row"}>
-                                        <Typography className="title">
+                                        <Typography className="title" noWrap>
                                             {product.productName}
                                         </Typography>
                                         <Divider width="2" height="24" bg="#d9d9d9" />
