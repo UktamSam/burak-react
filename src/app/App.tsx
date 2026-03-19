@@ -42,6 +42,8 @@ const handleLoginClose = () => setLoginOpen(false);
             onDelete={onDelete} 
             onDeleteAll={onDeleteAll}
             onAdd={onAdd}
+            setSignupOpen={setSignupOpen}
+            setLoginOpen={setLoginOpen}
           /> 
         : <OtherNavbar 
             cartItems = {cartItems} 
@@ -49,6 +51,8 @@ const handleLoginClose = () => setLoginOpen(false);
             onDelete={onDelete} 
             onDeleteAll={onDeleteAll}
             onAdd={onAdd}
+            setSignupOpen={setSignupOpen}
+            setLoginOpen={setLoginOpen}
           />}
         <Switch>
           <Route path="/products">
