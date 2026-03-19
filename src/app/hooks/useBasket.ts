@@ -3,16 +3,16 @@ import { CartItem } from "../../lib/types/search";
 
 const useBasket = () => {
     const cartJson: string | null = localStorage.getItem("cartData");
-    const currentCart: CartItem[] = cartJson ? JSON.parse(cartJson) : [];
+    const currentCart: CartItem[] = cartJson ? JSON.parse(cartJson) : []; // JSON.parse => Object _id
     const [cartItems, setCartItems] = useState<CartItem[]>(currentCart);
 
     const onAdd = (input: CartItem) => {
     const exist: any = cartItems.find((item: CartItem) => item._id === input._id);
     if (exist) {
         const cartUpdate = cartItems.map(( item: CartItem ) => 
-        item._id === input._id 
-        ? { ...exist, quantity: exist.quantity + 1 }
-        : item
+        item._id === input._id //match?
+        ? { ...item, quantity: item.quantity + 1 } // return NEW Object
+        : item // return SAME Object (no changes)
     );
     setCartItems(cartUpdate);
     localStorage.setItem("cartData", JSON.stringify(cartUpdate));
