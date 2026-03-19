@@ -296,3 +296,7 @@ const {popularDishes} = useSelector(popularDishesRetriever);
 1) Basketga yangi product qo'shish mantiq - 
 2) Basket mantiqi hooklar orqali - 
 3) Basket bilan bog'liq boshqa mantiqlar - 
+===================================================================================================================================================
+#85 Token Authentication develop qilamiz
+1) Authentication modal Component publishing - 
+2) Authentication develop - 
