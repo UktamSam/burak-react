@@ -289,7 +289,8 @@ const {popularDishes} = useSelector(popularDishesRetriever);
 3) productsSearch object develop & data fetch - 
 4) ChosenProducts Server API asosida develop
 
-{ withCredentials: true } - “cookies request bilan birga chiqadi”
+{ withCredentials: true } - “cookies request bilan birga chiqadi(BE FEga cookies joylaydi)”
+"withCredentials" ishlashi uchun BE & FE bitta domenda va *https* protokolda bo'lish kerak. 
 ===================================================================================================================================================
 #84 Basket - Savatimizni buziness mantiqini develop qilamiz
 
@@ -300,3 +301,10 @@ const {popularDishes} = useSelector(popularDishesRetriever);
 #85 Token Authentication develop qilamiz
 1) Authentication modal Component publishing - 
 2) Authentication develop - 
+
+===================================================================================================================================================
+#86 Token Authentication davom ettiramiz
+1) Global variablelar uchun customized hook - 
+2) Hooklarga context integration - 
+3) User authenticated bo'lganda hook ishlashi - 
+4) Logout develop - 
