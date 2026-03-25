@@ -9,9 +9,27 @@ import ProcessOrders from "./ProcessOrders";
 import FinishedOrders from "./FinishedOrders";
 import "../../../css/order.css";
 
+import { useDispatch } from "react-redux";
+import { Dispatch } from "@reduxjs/toolkit";
+import { setPausedOrders, setProcessOrders, setFinishedOrders } from "./slice";
+import MemberService from "../../services/MemberService";
+import { Member } from "../../../lib/types/member";
+import { Order } from "../../../lib/types/orders";
+
+
+/* REDUX SLICE & SELECTOR */
+const actionDispatch = (dispatch: Dispatch) => ({                           //DEFINE
+  savePausedOrdersToStore: (data: Order[]) => dispatch(setPausedOrders(data)),
+  saveProcessOrdersToStore: (data: Order[]) => dispatch(setProcessOrders(data)),
+  saveFinishedOrdersToStore: (data: Order[]) => dispatch(setFinishedOrders(data)),
+// 1 - (команда)                                   // 2 -  (Action из Redux)
+});
+
+
 export default function OrdersPage() {
   const [value, setValue] = useState<string>("1");
 
+  /* HANDLERS */
   const handleChange = (e: SyntheticEvent, newValue: string) => {
     setValue(newValue);
   };

@@ -115,7 +115,9 @@ const handleLoginRequest = async () => {
     const result = await member.login(loginInput);
 
     // Saving Authenticated user
-    setAuthMember(result);
+    setAuthMember(result); // A - version
+    localStorage.removeItem("memberData"); // B - version  
+        
     handleLoginClose();
   } catch (err) {
     console.log(err);

@@ -25,7 +25,7 @@ const useBasket = () => {
 
     const onRemove = (input: CartItem) => {
         const exist: any = cartItems.find(
-            (item: CartItem) => item._id !== input._id
+            (item: CartItem) => item._id === input._id
         );
         if (exist.quantity === 1) {
             const cartUpdate = cartItems.filter(
@@ -35,7 +35,7 @@ const useBasket = () => {
         localStorage.setItem("cartData", JSON.stringify(cartUpdate));
         } else {
             const cartUpdate = cartItems.map((item: CartItem) => 
-            item._id === input._id
+            item._id === input._id && exist
             ? { ...exist, quantity: exist.quantity - 1 } 
             : item 
         );

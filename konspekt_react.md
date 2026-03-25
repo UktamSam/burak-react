@@ -303,8 +303,33 @@ const {popularDishes} = useSelector(popularDishesRetriever);
 2) Authentication develop - 
 
 ===================================================================================================================================================
-#86 Token Authentication davom ettiramiz
+#86=101 Token Authentication davom ettiramiz
 1) Global variablelar uchun customized hook - 
 2) Hooklarga context integration - 
 3) User authenticated bo'lganda hook ishlashi - 
 4) Logout develop - 
+
+HOOK - malum bir vazifani bajaruvchi signal(qarmoq).
+Function VIEW qaytaradi Hook esa mantiq qaytaradi (onAdd, onRemove)
+
+Mantiqda: A - version (hozir ko'rib turgan); B - version (update'dan keyin ko'radigan mantiq)
+
+REDUX - big Architecture mantiqlarni bajaroladi.
+Context - kichikroq mantiq (login bo'lganlar uchun ...)
+– Cookie authentication (cross-origin):
+    withCredentials: true ishlatilishi kerak
+    → Frontend va Backend turli domain bo'lsa, cookie avtomatik yuborilmaydi
+    → { withCredentials: true } ni axios/fetch da berish shart
+
+    secure: true bo'lsa → cookie FAQAT HTTPS orqali ishlaydi
+    → Local dev da ishlamaydi, chunki HTTP → proxy kerak bo'ladi
+
+    – Authenticated user'larni global context storage'ga saqlaymiz
+    → Prop drilling'dan qochish uchun — har bir componentga props uzatmaslik uchun
+    → Ilovaning istalgan joyidan authMember'ga murojaat qilish mumkin
+
+===================================================================================================================================================
+##102 Token Authentication davom ettiramiz
+
+1) OrdersPage Screen componentini Type Integration - 
+2) OrdersPage Redux Architecture - 

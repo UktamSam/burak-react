@@ -9,18 +9,12 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useHistory } from "react-router-dom";
 import { CartItem } from "../../../lib/types/search";
 import { serverApi } from "../../../lib/config";
-
-interface BasketProps {
-    cartItems: CartItem[];
-    onAdd: (item: CartItem) => void;
-    onRemove: (item: CartItem) => void;
-    onDelete: (item: CartItem) => void;
-    onDeleteAll: () => void;
-}
+import { useGlobals } from "../../hooks/useGlobals";
 
 
-export default function Basket(props: BasketProps) {
-  const {cartItems, onAdd,  onRemove, onDelete, onDeleteAll}  = props;
+export default function Basket() {
+  const { basket } = useGlobals();
+  const {cartItems, onAdd,  onRemove, onDelete, onDeleteAll}  = basket;
   const authMember = null;
   const history = useHistory();
   const itemsPrice: number = cartItems.reduce(

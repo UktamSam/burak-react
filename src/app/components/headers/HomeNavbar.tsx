@@ -8,11 +8,6 @@ import { serverApi } from "../../../lib/config";
 import { Logout } from "@mui/icons-material";
 
 interface HomeNavbarProps {
-    cartItems: CartItem[];
-    onAdd: (item: CartItem) => void;
-    onRemove: (item: CartItem) => void;
-    onDelete: (item: CartItem) => void;
-    onDeleteAll: () => void;
     setSignupOpen: (isOpen: boolean) => void;
     setLoginOpen: (isOpen: boolean) => void;
     handleLogoutClick: (e: React.MouseEvent<HTMLElement>) => void;
@@ -24,11 +19,6 @@ interface HomeNavbarProps {
 
 export default function HomeNavbar(props: HomeNavbarProps) {
     const {
-        cartItems, 
-        onAdd,  
-        onRemove, 
-        onDelete, 
-        onDeleteAll,
         setSignupOpen,
         setLoginOpen,
         handleLogoutClick,
@@ -69,11 +59,6 @@ return  <div className="home-navbar">
                                 <NavLink to="/help" activeClassName={"underline"}>Help</NavLink>
                             </Box>
                             <Basket 
-                                cartItems={cartItems} 
-                                onRemove = {onRemove} 
-                                onDelete={onDelete} 
-                                onDeleteAll={onDeleteAll}
-                                onAdd={onAdd}
                             />  
                             {!authMember ? (
                                 <Box>

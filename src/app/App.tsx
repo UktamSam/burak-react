@@ -27,9 +27,12 @@ import { useGlobals } from "./hooks/useGlobals";
 function App() {
   const location = useLocation();   //useText - hooklar
   const { setAuthMember } = useGlobals();
-  const {cartItems, onAdd,  onRemove, onDelete, onDeleteAll} = useBasket();
+
+  // modal state
   const [signupOpen, setSignupOpen] = useState<boolean>(false)
   const [loginOpen, setLoginOpen] = useState<boolean>(false)
+
+  // logout menu state
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null >(null)
 
 
@@ -38,10 +41,10 @@ function App() {
 const handleSignupClose = () => setSignupOpen(false);
 const handleLoginClose = () => setLoginOpen(false);
 
+ // Handlers of logout menu
 const handleLogoutClick = (e: React.MouseEvent<HTMLElement>) => {
   setAnchorEl(e.currentTarget);
 }
-
 const handleCloseLogout = () => setAnchorEl(null);
 const handleLogoutRequest = async () => {
   try {
@@ -60,11 +63,6 @@ const handleLogoutRequest = async () => {
      <>
         {location.pathname === "/" 
         ? <HomeNavbar 
-            cartItems = {cartItems} 
-            onRemove = {onRemove} 
-            onDelete={onDelete} 
-            onDeleteAll={onDeleteAll}
-            onAdd={onAdd}
             setSignupOpen={setSignupOpen}
             setLoginOpen={setLoginOpen}
             anchorEl={anchorEl}
@@ -73,11 +71,6 @@ const handleLogoutRequest = async () => {
             handleLogoutRequest={handleLogoutRequest}
           /> 
         : <OtherNavbar 
-            cartItems = {cartItems} 
-            onRemove = {onRemove} 
-            onDelete={onDelete} 
-            onDeleteAll={onDeleteAll}
-            onAdd={onAdd}
             setSignupOpen={setSignupOpen}
             setLoginOpen={setLoginOpen}
             anchorEl={anchorEl}
@@ -87,7 +80,7 @@ const handleLogoutRequest = async () => {
           />}
         <Switch>
           <Route path="/products">
-            <ProductsPage onAdd = {onAdd}/>
+            <ProductsPage />
           </Route>
           <Route exact path="/orders">
             <OrdersPage />

@@ -76,10 +76,9 @@ public async getRestaurant(): Promise<Member> {
             public async logout(): Promise<void> {
         try {
             const url = this.path + "/member/logout"
-            const result = await axios.post(url, {}, { withCredentials: true });
+            const result = await axios.post(url, {}, { withCredentials: true }); // axios - cookie'ni tashqariga chiqarmaydi
             console.log("logout:", result);
             
-            localStorage.removeItem("memberData");           
         } catch (err) {
             console.log("Error, logout:", err);
             throw err;
