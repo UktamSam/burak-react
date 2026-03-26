@@ -25,7 +25,7 @@ export default function OtherNavbar(props: OtherNavbarProps) {
         handleLogoutRequest,
     }  = props;    
     
-    const { authMember } = useGlobals();
+    const { authUser } = useGlobals();
     
     return <div className="other-navbar">
                 <Container className="navbar-container">
@@ -42,12 +42,12 @@ export default function OtherNavbar(props: OtherNavbarProps) {
                             <Box className={"hover-line"}>
                                 <NavLink to="/products" activeClassName={"underline"}>Products</NavLink>
                             </Box>
-                            {authMember ? (
+                            {authUser ? (
                             <Box className={"hover-line"}>
                                 <NavLink to="/orders" activeClassName={"underline"}>Orders</NavLink>
                             </Box>
                             ) : null} 
-                            {authMember ? (
+                            {authUser ? (
                             <Box className={"hover-line"}>
                                 <NavLink to="/member-page" activeClassName={"underline"}>My page</NavLink>
                             </Box>      
@@ -56,7 +56,7 @@ export default function OtherNavbar(props: OtherNavbarProps) {
                                 <NavLink to="/help" activeClassName={"underline"}>Help</NavLink>
                             </Box>
                             <Basket /> 
-                            {!authMember ? (
+                            {!authUser ? (
                                 <Box>
                                     <Button 
                                         variant="contained" 
@@ -68,8 +68,8 @@ export default function OtherNavbar(props: OtherNavbarProps) {
                                 </Box>
                             ) : (
                                 <img    src={
-                                            authMember?.memberImage 
-                                            ? `${serverApi}/${authMember?.memberImage}`
+                                            authUser?.memberImage 
+                                            ? `${serverApi}/${authUser?.memberImage}`
                                             : "/icons/default-user.svg" 
                                         } 
                                         aria-haspopup={"true"} 

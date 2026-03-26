@@ -89,7 +89,7 @@ const handleSignupRequest = async () => {
     }
 
     const member = new MemberService();
-    const result = await member.signup(signupInput);
+    const result = await member.signUp(signupInput);
 
     // Saving Authenticated user
     setAuthMember(result);

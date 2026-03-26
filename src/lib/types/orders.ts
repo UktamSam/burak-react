@@ -11,7 +11,7 @@ export interface OrderItemInput {
 export interface Order {
     _id: string;
     orderTotal: number;
-    orderDelivery: number;
+    orderDelevery: number;
     orderStatus: OrderStatus;
     memberId: string;
     createdAt: Date;

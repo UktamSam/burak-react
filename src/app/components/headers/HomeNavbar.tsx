@@ -6,6 +6,7 @@ import { CartItem } from "../../../lib/types/search";
 import { useGlobals } from "../../hooks/useGlobals";
 import { serverApi } from "../../../lib/config";
 import { Logout } from "@mui/icons-material";
+import useBasket from "../../hooks/useBasket";
 
 interface HomeNavbarProps {
     setSignupOpen: (isOpen: boolean) => void;
@@ -18,6 +19,7 @@ interface HomeNavbarProps {
 
 
 export default function HomeNavbar(props: HomeNavbarProps) {
+    const { basket } = useGlobals();
     const {
         setSignupOpen,
         setLoginOpen,
@@ -26,7 +28,7 @@ export default function HomeNavbar(props: HomeNavbarProps) {
         handleCloseLogout,
         handleLogoutRequest,
     }  = props;
-    const { authMember } = useGlobals();
+    const { authUser } = useGlobals();
     
     /* HANDLER */
 
@@ -45,12 +47,12 @@ return  <div className="home-navbar">
                             <Box className={"hover-line"}>
                                 <NavLink to="/products" activeClassName={"underline"}>Products</NavLink>
                             </Box>
-                            {authMember ? (
+                            {authUser ? (
                             <Box className={"hover-line"}>
                                 <NavLink to="/orders" activeClassName={"underline"}>Orders</NavLink>
                             </Box>
                             ) : null} 
-                            {authMember ? (
+                            {authUser ? (
                             <Box className={"hover-line"}>
                                 <NavLink to="/member-page" activeClassName={"underline"}>My page</NavLink>
                             </Box>      
@@ -60,7 +62,7 @@ return  <div className="home-navbar">
                             </Box>
                             <Basket 
                             />  
-                            {!authMember ? (
+                            {!authUser ? (
                                 <Box>
                                     <Button 
                                         variant="contained" 
@@ -72,8 +74,8 @@ return  <div className="home-navbar">
                                 </Box>
                             ) : (
                                 <img    src={
-                                            authMember?.memberImage 
-                                            ? `${serverApi}/${authMember?.memberImage}`
+                                            authUser?.memberImage 
+                                            ? `${serverApi}/${authUser?.memberImage}`
                                             : "/icons/default-user.svg" 
                                         } 
                                         aria-haspopup={"true"} 
@@ -134,7 +136,7 @@ return  <div className="home-navbar">
                             <Box className="welcome-txt">The Choice, not just a choice</Box>
                             <Box className="service-txt">24 hours service</Box>
                             <Box className="signup">
-                                {!authMember ?  
+                                {!authUser ?  
                                     <Button 
                                         variant="contained" 
                                         className="signup-btn"

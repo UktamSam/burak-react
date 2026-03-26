@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Container, Stack } from "@mui/material";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { useGlobals } from "../../hooks/useGlobals";
 
 //CSS-in-JS - JS ichida yangi customize component hosil qilish.(styled-components; JSS; Emotion) 
 const Footers = styled.div`
@@ -13,8 +14,7 @@ const Footers = styled.div`
 `;
 
 export default function Footer() {
-  const authMember = null;
-
+const { authUser } = useGlobals();
   return (
     <Footers>
       <Container>
@@ -42,7 +42,7 @@ export default function Footer() {
                 <Box className={"foot-category-link"}>
                   <Link to="/">Home</Link>
                   <Link to="/products">Products</Link>
-                  {authMember && <Link to="/orders">Orders</Link>}
+                  {authUser && <Link to="/orders">Orders</Link>}
                   <Link to="/help">Help</Link>
                 </Box>
               </Box>
